@@ -1,6 +1,8 @@
 {
-  "title": "study React",
-  "home": "Home",
-  "about": "About us",
-  "more": "More"
+  "translation": {
+    "title": "study React",
+    "home": "Home",
+    "about": "About us",
+    "more": "More"
+  }
 }
