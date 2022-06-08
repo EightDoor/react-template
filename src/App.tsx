@@ -1,15 +1,13 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
-// 页面
-import Home from '@/views/home/index'
+import { RecoilRoot } from 'recoil'
+import Router from '@/router'
+import { DebugObserver } from '@/recoil/debug_recoil'
 
 const App = () => {
   return (
-      <BrowserRouter>
-          <Routes>
-              <Route path="/" element={<Home/>}/>
-          </Routes>
-      </BrowserRouter>
+      <RecoilRoot>
+          <DebugObserver/>
+          <Router/>
+      </RecoilRoot>
   )
 }
 

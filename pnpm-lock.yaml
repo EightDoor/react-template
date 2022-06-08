@@ -16,12 +16,13 @@ specifiers:
   react-dom: ^18.0.0
   react-i18next: ^11.17.0
   react-router-dom: ^6.3.0
+  recoil: ^0.7.3
   rollup: ^2.75.6
   rollup-plugin-visualizer: ^5.6.0
   typescript: ^4.6.3
   vite: ^2.9.9
   vite-plugin-imp: ^2.1.8
-  zhoukai_utils: ^2.0.1
+  zhoukai_utils: 2.0.0
 
 dependencies:
   ahooks: 3.4.1_react@18.1.0
@@ -30,7 +31,8 @@ dependencies:
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-router-dom: 6.3.0_ef5jwxihqo6n7gxfmzogljlgcm
-  zhoukai_utils: 2.0.1
+  recoil: 0.7.3_ef5jwxihqo6n7gxfmzogljlgcm
+  zhoukai_utils: 2.0.0
 
 devDependencies:
   '@antfu/eslint-config': 0.25.1_ud6rd4xtew5bv4yhvkvu24pzm4
@@ -2109,6 +2111,10 @@ packages:
     dev: true
     optional: true
 
+  /hamt_plus/1.0.2:
+    resolution: {integrity: sha512-t2JXKaehnMb9paaYA7J0BX8QQAY8lwfQ9Gjf4pg/mk4krt+cmwmU652HOoWonf+7+EQV97ARPMhhVgU1ra2GhA==}
+    dev: false
+
   /has-bigints/1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
     dev: true
@@ -2511,6 +2517,10 @@ packages:
     dependencies:
       p-locate: 4.1.0
     dev: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -3557,6 +3567,23 @@ packages:
       type-fest: 0.6.0
     dev: true
 
+  /recoil/0.7.3_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-WaPppk3Hz5/V9nOVmu1X/o3cJyf/rLXw/YsEENvMzEDk+LKqMiGfFgZ3Gg51TKWccpCZCyrSBXn2O4L1E2WDPQ==}
+    peerDependencies:
+      react: '>=16.13.1'
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      hamt_plus: 1.0.2
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
+
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
 
@@ -4113,9 +4140,10 @@ packages:
       yargs-parser: 21.0.1
     dev: true
 
-  /zhoukai_utils/2.0.1:
-    resolution: {integrity: sha512-ydK8ittVkTCPNNvAYxurfdTvnGm+/jZM3yb83zh6UlYNG5+1aWatVaCy3MTXTcyii5VfYNPsspkNb6L0YKBvHA==}
+  /zhoukai_utils/2.0.0:
+    resolution: {integrity: sha512-AEWYLlC2c/NtiVTTLWxlpjmzwv9wQaYIzDDsMEq1l/DKZE6HoUs+4/SVLsoD+hz+JsGr9GC8l/RP51eDel71CQ==}
     dependencies:
       chalk: 4.1.2
       dayjs: 1.11.3
+      lodash-es: 4.17.21
     dev: false
