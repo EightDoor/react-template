@@ -1,6 +1,9 @@
 import * as path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import vitePluginImp from 'vite-plugin-imp'
+// 按需打包
+import visualizer from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,5 +22,29 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  plugins: [react()],
+  build: {
+    rollupOptions: {
+      plugins: [
+        visualizer(),
+      ],
+    },
+  },
+  plugins: [
+    react(),
+    vitePluginImp({
+      libList: [
+        {
+          libName: 'antd',
+          style: name => `antd/es/${name}/style`,
+        },
+      ],
+    })],
+  css: {
+    preprocessorOptions: {
+      less: {
+        // modifyVars: { 'primary-color': '#13c2c2' },
+        javascriptEnabled: true,
+      },
+    },
+  },
 })
